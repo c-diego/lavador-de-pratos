@@ -37,6 +37,8 @@ public class Escorredor {
     public Prato take() {
 
         Prato temp = pratos[takeptr];
+        if (++takeptr == size)
+            takeptr = 0;
         if (--count == 0)
             System.out.println("Escorredor está vazio!");
         return temp;
